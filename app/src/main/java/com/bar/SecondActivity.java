@@ -8,23 +8,23 @@ import android.view.View.*;
 import android.content.*;
 
 
-public class MainActivity extends Activity 
+public class SecondActivity extends Activity 
 {
-    private Button btn;
+    private Button back;
 	private Intent i = new Intent();
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.second);
         
         
-        btn=(Button) findViewById(R.id.btn);
-		btn.setOnClickListener(new View.OnClickListener(){
+        back=(Button) findViewById(R.id.back);
+		back.setOnClickListener(new View.OnClickListener(){
 				@Override
 				public void onClick(View v){
-					i.setClass(getApplicationContext(),SecondActivity.class);
+					i.setClass(getApplicationContext(),MainActivity.class);
 					startActivity(i);
 				}
 		});
